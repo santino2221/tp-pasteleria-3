@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajo TP Firebase Pastelería</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Gestor de Recetas de Pastelería</h1>
+
+    <section>
+        <h2>Registrar Receta</h2>
+        <form id="formReceta">
+            <input type="text" id="nombreReceta" placeholder="Nombre de la receta" required>
+            <input type="text" id="pastelero" placeholder="Chef / Pastelero/a" required>
+            
+            <select id="categoria" required>
+                <option value="">Selecciona tipo</option>
+                <option value="Dulce">Dulce</option>
+                <option value="Salado">Salado</option>
+                <option value="Agridulce">Agridulce</option>
+            </select>
+
+            <input type="number" id="tiempoPreparacion" placeholder="Tiempo (min)" required>
+            <input type="text" id="dificultad" placeholder="Dificultad" required>
+            <input type="url" id="imagenUrl" placeholder="URL de la imagen" required>
+            <input type="date" id="fechaCreacion" required>
+            
+            <button type="button" id="btnGuardar">Guardar Receta</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>Lista de Recetas</h2>
+        <input type="text" id="inputBuscar" placeholder="Buscar receta por nombre..." style="margin-bottom: 15px; padding: 12px; width: 100%; border: 1px solid #ddd; border-radius: 8px;">
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Imagen</th>
+                    <th>Receta</th>
+                    <th>Chef / Pastelero/a</th>
+                    <th>Tipo</th>
+                    <th>Tiempo</th>
+                    <th>Dificultad</th>
+                    <th>Fecha</th>
+                </tr>
+            </thead>
+            <tbody id="tablaRecetas"></tbody>
+        </table>
+    </section>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>
